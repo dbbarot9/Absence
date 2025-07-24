@@ -1,0 +1,13 @@
+<mvc:View
+		controllerName="zleavedata.controller.Empty"
+		height="100%"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:core="sap.ui.core"
+		xmlns="sap.m"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:fb="sap.ui.comp.filterbar"
+		xmlns:svm="sap.ui.comp.smartvariants"
+		xmlns:l="sap.ui.layout">
+		<Page enableScrolling="true" title="My Leave Records" titleLevel="H1" titleAlignment="Center" class='bodyPage'>
+        	</Page>
+</mvc:View>

@@ -1,0 +1,35 @@
+
+<mvc:View
+		controllerName="zleavedata.controller.First"
+		height="100%"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:core="sap.ui.core"
+		xmlns="sap.m"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:fb="sap.ui.comp.filterbar"
+		xmlns:svm="sap.ui.comp.smartvariants"
+		xmlns:l="sap.ui.layout">
+		<Page enableScrolling="true" title="" titleLevel="H1" titleAlignment="Center" class='bodyPage'>
+		<f:SimpleForm id="idhcmForm" width="100%" backgroundDesign="Translucent">
+	<List id="idList" width="100%" 
+		headerText="Absence Summery" growing="true" mode="SingleSelectMaster" selectionChange="onItemSelect">
+		<items>
+		<!-- <ObjectListItem id="idhcmObj"
+			title="{ktext}" intro="{pernr}" icon="sap-icon://time-off"
+			number="{
+				parts:[{path:'anzhl'}],
+					type: 'sap.ui.model.type.Time',
+				formatOptions: {showMeasure: false}
+							}"
+							 >		 -->
+			<!-- <firstStatus>
+				<ObjectStatus
+					text="{anzhl}"
+					state="{= ${anzhl} > 100 ? 'Success' : 'None' }"  />
+			</firstStatus> -->
+			<!-- <ObjectAttribute text="{desta}" /> -->
+		<!-- </ObjectListItem> -->
+		</items>
+	</List></f:SimpleForm>
+	</Page>
+</mvc:View>

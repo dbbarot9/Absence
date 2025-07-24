@@ -1,0 +1,149 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "zleavedata",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "Leave Data",
+    "description": "Leave Data",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.1",
+      "toolsId": "40a6f96e-0ff3-4cef-8cf5-7c175cb6da13"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZHCM_LEAVEDATA_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "2.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "zleave-Display": {
+          "semanticObject": "zleave",
+          "action": "Display",
+          "title": "Leave data",
+          "subTitle": "HCM",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.136.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "zleavedata.i18n.i18n"
+        }
+      },
+      "": {
+        "type": "sap.ui.model.odata.v2.ODataModel",
+        "dataSource": "mainService",
+        "settings": {
+          "defaultCountMode": "None",
+          "useBatch": false
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "clearControlAggregation": true,
+        "controlId": "idAppCon",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "zleavedata.view",
+        "async": true,
+        "viewPath": "zleavedata.view"
+      },
+      "routes": [
+        {
+          "name": "RouteFirst",
+          "pattern": "",
+          "target": [
+            "Home","Empty"
+          ]
+        },
+        {
+          "name": "RouteTo",
+          "pattern": "LeaveData/{leave}",
+          "target": [
+            "Home","Second"
+          ]
+        }
+      ],
+      "targets": {
+        "Home": {
+          "viewName": "First",
+          "viewId": "idFirst",
+           "controlAggregation": "masterPages"
+        },
+        "Empty": {
+          "viewName": "Empty",
+          "viewId": "idEmpty",
+           "controlAggregation": "detailPages"
+        },
+        "Second": {
+          "viewName": "Second",
+          "viewId": "idSecond",
+           "controlAggregation": "detailPages"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "zleavedata.view.App",
+      "type": "XML",
+      "id": "idAppCon",
+      "async": true
+    }
+  }
+}

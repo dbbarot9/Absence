@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: zleavedata
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: DE1
+          url: http://devabap:44900
+          client: '100'
+        app:
+          name: ZZ1_ABSENCE
+          description: Absence data app
+          package: ZDE1
+          transport: DE1K914909
+        exclude:
+          - /test/

@@ -1,0 +1,56 @@
+
+<mvc:View
+		controllerName="zleavedata.controller.Second"
+		height="100%"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:core="sap.ui.core"
+		xmlns="sap.m"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:fb="sap.ui.comp.filterbar"
+		xmlns:svm="sap.ui.comp.smartvariants"
+		xmlns:l="sap.ui.layout">
+		<Page enableScrolling="true" id="idDetail" title="Absence History" titleLevel="H1" titleAlignment="Center" backgroundDesign="Solid" class='bodyPage'>
+		<headerContent>
+		<!-- <Image ariaDetails="detailsActiveImage" src="./IMAGE/logo.png" width="" height="5em" mode="Image"></Image>  -->
+		</headerContent>
+		<content>
+		<Table id="table" alternateRowColors="true" 
+        items="{
+			path: '/TimetakenSet'
+            }" growing="false"
+		  > 
+			
+		<columns>
+			<Column id="idhcmpernr"
+				width="12em" demandPopin="true" >
+				<header ><Text text="Personal No" class='backgroundColor' /></header>
+			</Column>
+			<Column id="idhcmtext"
+				width="10em" demandPopin="true" >
+				<header><Text text="Start Date" /></header>
+			</Column>
+			<Column	width="12em" id="idhcmdate" >
+				<header><Text text="End Date" /></header>
+			</Column>
+			<Column	width="12em" id="idhcmhour" >
+				<header><Text text="Hours" /></header>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle" id="idColoumn">
+				<cells>
+						<Text id="idhcmlink" text="{PERNR}" 
+						class="sapMText sapUiTinyMargin"></Text>
+					<Text id="idhcmtext1" text="{BEGDA}" 
+					class="sapMText sapUiTinyMargin"></Text>	
+					<Text id="idhcmtext2" text="{ENDDA}"
+					class="sapMText sapUiTinyMargin"></Text>	
+					<Text id="idhcmtext3" text="{STDAZ}" 
+					class="sapMText sapUiTinyMargin"></Text>	
+							
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table></content>
+	</Page>
+</mvc:View>
