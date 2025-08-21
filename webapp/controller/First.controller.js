@@ -15,11 +15,9 @@ sap.ui.define([
   'sap/m/Column',
   "sap/ui/core/Fragment",
   'sap/m/Text',
-  'sap/ui/core/date/UI5Date',
-  'sap/ui/core/format/DateFormat',
   'sap/ui/export/Spreadsheet',
   'sap/m/ObjectListItem'
-], (BaseController,Controller,Filter,FilterOperator,ODataModel, MessageToast, SearchField, Token, compLibrary, TypeString, ColumnListItem, Label,  UIColumn, MColumn, Fragment, Text, UI5Date, DateFormat, Spreadsheet, ObjectListItem) => {
+], (BaseController,Controller,Filter,FilterOperator,ODataModel, MessageToast, SearchField, Token, compLibrary, TypeString, ColumnListItem, Label,  UIColumn, MColumn, Fragment, Text, Spreadsheet, ObjectListItem) => {
   "use strict";
 
   return Controller.extend("BaseController", {
@@ -103,8 +101,8 @@ sap.ui.define([
         // Bind items without filters first
         var oBinding = this.getView().byId("idList").bindItems({
           path: "/TimeaccountSet",
-          template: oTemplate,
-          filters: oFilter3
+          template: oTemplate
+       //   filters: oFilter3
         });
         
       

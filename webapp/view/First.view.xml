@@ -12,7 +12,7 @@
 		<Page enableScrolling="true" title="" titleLevel="H1" titleAlignment="Center" class='bodyPage'>
 		<f:SimpleForm id="idhcmForm" width="100%" backgroundDesign="Translucent">
 	<List id="idList" width="100%" 
-		headerText="Absence Summery" growing="true" mode="SingleSelectMaster" selectionChange="onItemSelect">
+		headerText="Absence Quotas" growing="true" mode="SingleSelectMaster" selectionChange="onItemSelect">
 		<items>
 		<!-- <ObjectListItem id="idhcmObj"
 			title="{ktext}" intro="{pernr}" icon="sap-icon://time-off"

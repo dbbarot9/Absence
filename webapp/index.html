@@ -9,9 +9,15 @@
         }'
         data-sap-ui-bindingSyntax="complex"></script>
                 <script>
+                   var existingComponent = sap.ui.getCore().byId("application-zleavedata-component");
+                         if (existingComponent) {
+                            existingComponent.destroy(); // clean up old one
+                         }  
                    var oComponent = new sap.ui.core.ComponentContainer({
-                       name:"zleavedata"
+                       name:"zleavedata",
+                       async: true
                    });
+
                    oComponent.placeAt("oContent");
                 </script>
                 <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>

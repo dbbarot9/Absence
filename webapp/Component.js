@@ -23,7 +23,7 @@ sap.ui.define([
              oRouter.initialize();
         },
         destroy:function(){
-                
+            UIComponent.prototype.destroy.apply(this, arguments);
         }
     });
 });

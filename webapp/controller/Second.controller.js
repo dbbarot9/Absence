@@ -15,10 +15,8 @@ sap.ui.define([
     'sap/m/Column',
     "sap/ui/core/Fragment",
     'sap/m/Text',
-    'sap/ui/core/date/UI5Date',
-    'sap/ui/core/format/DateFormat',
     'sap/ui/export/Spreadsheet'
-], (BaseController,Controller,Filter,FilterOperator,ODataModel, MessageToast, SearchField, Token, compLibrary, TypeString, ColumnListItem, Label,  UIColumn, MColumn, Fragment, Text, UI5Date, DateFormat, Spreadsheet) => {
+], (BaseController,Controller,Filter,FilterOperator,ODataModel, MessageToast, SearchField, Token, compLibrary, TypeString, ColumnListItem, Label,  UIColumn, MColumn, Fragment, Text, Spreadsheet) => {
     "use strict";
 
     return Controller.extend("BaseController", {
